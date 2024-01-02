@@ -27,6 +27,10 @@ return {
   },
 
   lsp = {
+    setup_handlers = {
+      -- add custom handler
+      rust_analyzer = function(_, opts) require("rust-tools").setup { server = opts } end
+    },
     -- customize lsp formatting options
     formatting = {
       -- control auto formatting on save
@@ -43,7 +47,7 @@ return {
         -- disable lua_ls formatting capability if you want to use StyLua to format your lua code
         -- "lua_ls",
       },
-      timeout_ms = 1000, -- default format timeout
+      timeout_ms = 500, -- default format timeout
       -- filter = function(client) -- fully override the default formatting function
       --   return true
       -- end
