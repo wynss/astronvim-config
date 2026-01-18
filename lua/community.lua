@@ -11,4 +11,5 @@ return {
   { import = "astrocommunity.pack.python-ruff" },
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.completion.copilot-lua-cmp" },
+  { import = "astrocommunity.split-and-window.minimap-vim" },
 }
